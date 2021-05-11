@@ -50,7 +50,7 @@ export const DistributionStylePicker = props => {
 
     return (
         <Grid container spacing={0}>
-            <Grid xs={4}>
+            <Grid item xs={4}>
                 <MenuList>
                     {options.map((option, index) => (
                         <MenuItem key={index} selected={props.selectedIndex === index} onClick={(event) => props.onChange(index)}>
@@ -59,8 +59,8 @@ export const DistributionStylePicker = props => {
                     ))}
                 </MenuList>
             </Grid>
-            <Grid xs={2}></Grid>
-            <Grid xs={6}>
+            <Grid item xs={2}></Grid>
+            <Grid item xs={6}>
                 <Card variant="outlined">
                     <CardContent>
                         <Typography>Type: {options[props.selectedIndex].type}</Typography>
